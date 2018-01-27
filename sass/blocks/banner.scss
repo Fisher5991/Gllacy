@@ -1,0 +1,24 @@
+.banner {
+  color: #323232;
+}
+
+.banner__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.banner__link {
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #e84d37;
+  }
+}
+
+.banner__rubric {
+  font-weight: 500;
+}

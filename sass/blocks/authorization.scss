@@ -1,0 +1,22 @@
+.authorization {
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.authorization__field {
+  font-size: 14px;
+}
+
+.authorization__supporting-link {
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #e84d37;
+    border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+  }
+}

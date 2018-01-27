@@ -1,0 +1,22 @@
+.about-us__menu {
+  padding: 0;
+  list-style: none;
+}
+
+.about-us__link {
+  font-size: 13px;
+  line-height: 18px;
+  color: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  }
+}

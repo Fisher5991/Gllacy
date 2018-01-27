@@ -1,0 +1,21 @@
+.field {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  border: 1px solid #999999; /* нужно разобраться с блочной моделью */
+  outline: none;
+
+  &::placeholder { /* сделать абсолютной */
+    font-weight: normal;
+    color: #999999;
+  }
+
+  &:hover {
+    border: 2px solid #999999;
+  }
+
+  &:focus {
+    border: 2px solid #8fbdec;
+  }
+}

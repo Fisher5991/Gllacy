@@ -1,0 +1,17 @@
+.user-list {
+  padding: 0;
+  list-style: none;
+}
+
+.user-list__link {
+  display: block;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #9db1a5;
+
+  &:hover,
+  &:focus {
+    color: #323232;
+    background-color: #f8f7f4;
+  }
+}

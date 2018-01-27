@@ -1,0 +1,28 @@
+.basket {
+  background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.basket__content {
+  color: #323232;
+}
+
+.basket__item {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.basket__item-link {
+  color: inherit;
+}
+
+.basket__original-price {
+  color: #999999;
+}
+
+.basket__total-price {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: right;
+}

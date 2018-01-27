@@ -1,0 +1,28 @@
+.products__list {
+  padding: 0;
+  list-style: none;
+}
+
+.products__page-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  }
+}
+
+.products__price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.products__weight {
+  font-size: 30px;
+}

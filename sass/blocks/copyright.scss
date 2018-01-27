@@ -1,0 +1,17 @@
+.copyright__intro {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.copyright__link {
+  color: inherit;
+  border-bottom: 1px solid rgba(254, 254, 254, 0.2);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+  }
+}
