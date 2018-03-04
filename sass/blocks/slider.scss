@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 270px;
+}
+
+.slider__item {
+  display: none;
+}
+
+#btn-1:checked ~ .page__background .slider__item--1,
+#btn-2:checked ~ .page__background .slider__item--2,
+#btn-3:checked ~ .page__background .slider__item--3 {
+  display: block;
+}
+
+#btn-1:checked ~ .page__background .slider__toggle[for="btn-1"],
+#btn-2:checked ~ .page__background .slider__toggle[for="btn-2"],
+#btn-3:checked ~ .page__background .slider__toggle[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  font-size: 0;
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}

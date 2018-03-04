@@ -1,11 +1,15 @@
 .user-list {
+  display: flex;
+  margin-left: auto;
   padding: 0;
+  /* width: */
   list-style: none;
 }
 
 .user-list__link {
   display: block;
   font-weight: 500;
+  text-align: right;
   color: #ffffff;
   background-color: #9db1a5;
 

@@ -1,9 +1,71 @@
 .page {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+}
+
+.page__background-toggle {
+  display: none;
+}
+
+.page__background {
+  min-width: 1200px;
   background-color: #849d8f;
+  background-image: url("../img/gllacy_1@1x.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gllacy_1@2x.png");
+  }
+}
+
+.page__background {
+  &::before,
+  &::after {
+    content: "";
+    visibility: hidden;
+  }
+}
+
+.page__background::before {
+  background-image: url("../img/gllacy_2@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gllacy_2@2x.png");
+  }
+}
+
+.page__background::after {
+  background-image: url("../img/gllacy_3@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gllacy_3@2x.png");
+  }
+}
+
+.page__content {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+#btn-2:checked ~ .page__background {
+  background-color: #8996a6;
+  background-image: url("../img/gllacy_2@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gllacy_2@2x.png");
+  }
+}
+
+#btn-3:checked ~ .page__background {
+  background-color: #9d8b84;
+  background-image: url("../img/gllacy_3@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gllacy_3@2x.png");
+  }
 }

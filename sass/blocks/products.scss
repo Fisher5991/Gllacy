@@ -1,6 +1,20 @@
 .products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.products__item {
+  margin-bottom: 40px;
+  width: 267px;
+}
+
+.products__name {
+  margin: 0;
+  text-align: center;
 }
 
 .products__page-link {
