@@ -1,7 +1,26 @@
+.contacts {
+  position: relative;
+  width: 302px;
+  padding: 29px 25px 31px;
+  background-color: #ffffff;
+  background-image: url("../img/pattern_contacts@1x.jpg");
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/pattern_contacts@2x.jpg");
+  }
+}
+
 .contacts__description {
   font-size: 14px;
+  font-style: normal;
   line-height: 20px;
   color: #323232;
+
+  &--address {
+    margin-bottom: 17px;
+  }
 }
 
 .contacts__address {
@@ -11,6 +30,8 @@
 }
 
 .contacts__tel {
+  margin-top: 4px;
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
@@ -18,4 +39,12 @@
 
 .contacts__working-hours {
   line-height: 22px;
+}
+
+.contacts__button {
+  width: 100%;
+  margin-top: 23px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
 }

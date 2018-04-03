@@ -1,8 +1,6 @@
 .slider {
   position: relative;
-  margin: 0;
-  margin-bottom: 30px;
-  padding-top: 270px;
+  padding-top: 274px;
 }
 
 .slider__item {
@@ -23,7 +21,7 @@
 
 .slider__controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 22px;
   left: 0;
   font-size: 0;
 }
@@ -37,5 +35,14 @@
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  outline: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:active {
+    background-color: rgb(255, 255, 255);
+  }
 }

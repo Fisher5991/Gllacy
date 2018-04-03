@@ -1,16 +1,31 @@
 .site-list {
   display: flex;
-  padding: 0;
   width: 676px;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 16px;
   list-style: none;
 }
 
 .site-list__link {
   display: block;
+  padding: 5px 13px 8px 14px;
   font-weight: bold;
   line-height: 18px;
   color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    bottom: 7px;
+    left: 14px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
   &:hover,
   &:focus {
@@ -18,34 +33,96 @@
     background-color: #f7f6f3;
   }
 
+  &:hover::after,
+  &:focus::after {
+    content: none;
+  }
+
   &:active {
     color: #323232;
     background-color: #ededed;
     box-shadow: inset 0px 2px 1px 0px #696969;
   }
+
+  &:focus + .site-list__sub-wrapper {
+    display: block;
+  }
 }
 
 .site-list__item {
+  position: relative;
+  white-space: nowrap; /* проверка */
+
   &--current .site-list__link  {
     color: #ffffff;
     background-color: #d07058;
   }
+
+  &--current .site-list__link::after  {
+    content: none;
+  }
+
+  &--more:hover .site-list__sub-wrapper {
+    display: block;
+  }
+}
+
+.site-list__sub-wrapper {
+  position: absolute;
+  z-index: 2;
+  left: -7px;
+  display: none;
+  padding-top: 5px;
 }
 
 .site-list__sub {
+  width: 143px;
   padding: 0;
+  padding-bottom: 6px;
+  background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   list-style: none;
+  border-radius: 5px;
+}
+
+.site-list__sub-item {
+  &--border {
+    position: relative;
+    margin-bottom: 1px;
+  }
+
+  &--border::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    right: 9px;
+    bottom: -1px;
+    left: 6px;
+    background-color: #d1d0ce;
+  }
+
+  &:nth-child(2) .site-list__sub-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &:first-of-type .site-list__sub-link {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 }
 
 .site-list__sub-link {
   display: block;
+  padding: 7px 20px;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
   background-color: #f8f7f4;
 
   &--bold {
+    padding-top: 11px;
+    padding-bottom: 11px;
     font-weight: bold;
     color: #323232;
   }

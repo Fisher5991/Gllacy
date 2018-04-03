@@ -3,6 +3,11 @@
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  background-color: #849d8f;
+
+  &--inner {
+    background-image: linear-gradient(to bottom, #9cb0a5, #859e90 625px, #849d8f 626px);
+  }
 }
 
 .page__background-toggle {
@@ -44,12 +49,6 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/gllacy_3@2x.png");
   }
-}
-
-.page__content {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 27px;
 }
 
 #btn-2:checked ~ .page__background {

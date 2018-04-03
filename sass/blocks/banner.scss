@@ -1,9 +1,27 @@
 .banner {
   width: 560px;
+  min-height: 220px;
+  padding: 23px 260px 23px 20px;
   color: #323232;
+  background-color: #ffffff;
+  background-image: url("../img/strawberry_sherbet@1x.png");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/strawberry_sherbet@2x.png");
+  }
+}
+
+.banner__rubric {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
 }
 
 .banner__title {
+  margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -18,8 +36,4 @@
   &:active {
     color: #e84d37;
   }
-}
-
-.banner__rubric {
-  font-weight: 500;
 }

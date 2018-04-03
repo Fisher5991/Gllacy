@@ -1,7 +1,65 @@
 .subscription {
+  display: flex;
+  flex-direction: column;
   width: 560px;
+  height: 220px;
+  padding: 34px 26px 40px;
+  background-color: #f8f7f4;
+  background-image: url("../img/mail@1x.png");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mail@2x.png");
+  }
 }
 
 .subscription__description {
+  margin: 0;
+  margin-bottom: auto;
   color: #5a5a5a;
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__element {
+  position: relative;
+  margin: 0;
+}
+
+.subscription__field {
+  display: inline-block;
+  width: 368px;
+  height: 44px;
+  padding: 8px 13px 10px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+
+  &:focus + .subscription__label {
+    color: #5b9ddf;
+    opacity: 1;
+  }
+
+  &:valid + .subscription__label {
+    color: #999999;
+  }
+}
+
+.subscription__label {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  pointer-events: none;
+  font-size: 11px;
+  line-height: 13px;
+  opacity: 0;
+}
+
+.subscription__button {
+  display: inline-block;
+  margin-left: auto;
+  padding: 8px 18px 12px 19px;
 }

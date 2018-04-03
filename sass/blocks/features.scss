@@ -1,5 +1,16 @@
 .features {
+  width: 1146px;
+  margin-bottom: 40px;
+  padding: 24px 21px; /* фон надо не забыть поменять */
   color: #323232;
+  background-color: #e3d0b2;
+  background-image: url("../img/pattern_wafer@1x.jpg");
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url ("../img/pattern_wafer@2x.jpg");
+  }
 }
 
 .features__slogan {
@@ -9,6 +20,17 @@
 }
 
 .features__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.features__item {
+  width: 539px;
+  padding-top: 22px;
+  padding-left: 57px;
+  box-sizing: border-box;
 }

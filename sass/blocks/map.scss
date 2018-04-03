@@ -1,3 +1,19 @@
 .map {
-  min-height: 429px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1200px;
+  height: 429px; /* min */
+  margin: 0 auto;
+  background-image: url("../img/map@1x.jpg");
+  background-position: 0 -1px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map@2x.jpg");
+  }
+}
+
+.map__contacts {
+  margin: 0 27px;
 }

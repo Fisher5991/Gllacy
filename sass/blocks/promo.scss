@@ -1,20 +1,54 @@
 .promo {
   display: flex;
   justify-content: space-between;
+  margin: 0;
   margin-bottom: 40px;
 }
 
 .promo__block {
+  display: flex;
+  flex-direction: column;
   width: 560px;
+  min-height: 229px; //min
+  padding: 14px 20px 23px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.promo__block--raspberry {
+  background-color: #ba2750;
+  background-image: url("../img/raspberry@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/raspberry@2x.png");
+  }
+}
+
+.promo__block--chocolate {
+  background-color: #74432b;
+  background-image: url("../img/chocolate@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/chocolate@2x.png");
+  }
 }
 
 .promo__title {
+  margin: 0;
+  margin-bottom: 16px;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
 }
 
 .promo__info {
+  margin: 0;
   font-size: 18px;
   font-weight: bold;
+}
+
+.promo__link {
+  margin-top: auto;
+  padding: 9px 22px 13px 22px;
+  align-self: flex-end;
 }

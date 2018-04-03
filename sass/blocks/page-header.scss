@@ -1,3 +1,8 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header__logo {
   width: 154px;
   height: 63px;
@@ -5,16 +10,22 @@
 
 .page-header__menu {
   display: flex;
+  padding-top: 9px;
 }
 
 .page-header__contact {
+  align-self: flex-end;
+  width: 267px;
+  margin: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+  font-style: normal;
   text-align: right;
 }
 
 .page-header__contact-tel {
+  margin-top: 4px;
   font-size: 22px;
   line-height: 24px;
 }

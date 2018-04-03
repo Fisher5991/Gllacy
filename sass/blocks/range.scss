@@ -1,0 +1,56 @@
+.range__wrapper {
+  width: 219px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.range__controls {
+  position: relative;
+  margin-left: 22px;
+  margin-right: 22px;
+  padding-top: 16px;
+}
+
+.range__scale {
+  width: 176px;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+  cursor: pointer;
+}
+
+.range__bar {
+  width: 102px;
+  height: 4px;
+  margin-left: 21px;
+  background-color: rgb(248, 247, 244);
+}
+
+.range__toggle {
+  position: absolute;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    top: 7px;
+    width: 6px;
+    height: 5px;
+    border-top: 9px solid #ffffff;
+    border-bottom: 9px solid #ffffff;
+  }
+
+  &--min {
+    left: calc(21px - 8px);
+  }
+
+  &--max {
+    left: calc(119px - 8px); /* надо попробовать с right и с переменными */
+  }
+}

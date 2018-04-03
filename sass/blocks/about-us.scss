@@ -1,4 +1,13 @@
+.about-us {
+  display: flex;
+  width: 560px;
+}
+
 .about-us__menu {
+  display: flex;
+  flex-wrap: wrap; /* */
+  width: 303px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -19,4 +28,8 @@
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
   }
+}
+
+.about-us__info {
+  min-width: 140px;
 }
