@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page page--inner">
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <div class="container">
       <header class="page-header">
         <div class="page-header__menu">
@@ -46,7 +51,12 @@
           </nav>
           <ul class="user-list">
             <li class="user-list__item user-list__item--more">
-              <a class="user-list__link user-list__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
+              <a class="user-list__link user-list__link--search" href="#">
+                <span class="visually-hidden">Поиск</span>
+                <svg class="user-list__search-icon" width="17" height="17">
+                  <use xlink:href="#icon-loupe"></use>
+                </svg>
+              </a>
               <div class="user-list__search search">
                 <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
                   <p class="search__element">
@@ -58,7 +68,12 @@
               </div>
             </li>
             <li class="user-list__item user-list__item--more">
-              <a class="user-list__link user-list__link--authorization" href="#">Вход</a>
+              <a class="user-list__link user-list__link--authorization" href="#">
+                <svg class="user-list__authorization-icon" width="21" height="19">
+                  <use xlink:href="#icon-entrance"></use>
+                </svg>
+                Вход
+              </a>
               <div class="user-list__authorization authorization">
                 <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
                   <p class="authorization__element">
@@ -84,7 +99,9 @@
               </div>
             </li>
             <li class="user-list__item user-list__item--more user-list__item--active">
-              <a class="user-list__link user-list__link--basket user-list__link--basket-active" href="#"><span class="user-list__basket-count">2 товара</span></a>
+              <a class="user-list__link user-list__link--basket user-list__link--basket-active" href="#">
+                <span class="user-list__basket-count">2 товара</span>
+              </a>
               <div class="user-list__basket basket">
                 <div class="basket__wrapper">
                   <table class="basket__content">
@@ -149,7 +166,7 @@
           <div class="page-header__contact-tel">8&nbsp;812&nbsp;450-25-25</div>
         </address>
       </header>
-      <main class="page-main">
+      <main class="page-main page-main--inner">
         <ul class="page-main__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -167,13 +184,19 @@
           <form class="filters__form" action="#" method="get">
             <fieldset class="filters__block">
               <legend class="filters__name">Сортировка:</legend>
-              <label class="visually-hidden" for="sorting">Сортировать:</label>
-              <select class="filters__sorting" id="sorting" name="sorting">
-                <option class="filters__option-value" value="popularity" selected>по популярности</option>
-                <option class="filters__option-value" value="inexpensive">сначала недорогие</option>
-                <option class="filters__option-value" value="expensive">сначала дорогие</option>
-                <option class="filters__option-value" value="fatty">по жирности</option>
-              </select>
+              <label class="visually-hidden">Сортировать:</label>
+              <div class="filters__select-wrapper">
+                <select class="filters__sorting" id="sorting" name="sorting">
+                  <option class="filters__option-value" value="popularity" selected>по популярности</option>
+                  <option class="filters__option-value" value="inexpensive">сначала недорогие</option>
+                  <option class="filters__option-value" value="expensive">сначала дорогие</option>
+                  <option class="filters__option-value" value="fatty">по жирности</option>
+                </select>
+                <svg class="filters__arrow-icon" width="9" height="5">
+                  <use xlink:href="#icon-select-arrow"></use>
+                </svg>
+                <div class="filters__service"></div>
+              </div>
             </fieldset>
             <fieldset class="filters__block filters__block--price">
               <legend class="filters__name filters__name--price">Цена:</legend>
@@ -255,7 +278,7 @@
                 <source type="image/webp" srcset="img/ice_cream_orange@1x.webp 1x, img/ice_cream_orange@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_orange@1x.png" srcset="img/ice_cream_orange@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">310&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">310<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               </h3>
@@ -268,7 +291,7 @@
                 <source type="image/webp" srcset="img/ice_cream_coffee@1x.webp 1x, img/ice_cream_coffee@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_coffee@1x.png" srcset="img/ice_cream_coffee@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">380&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">380<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
               </h3>
@@ -281,7 +304,7 @@
                 <source type="image/webp" srcset="img/ice_cream_strawberry@1x.webp 1x, img/ice_cream_strawberry@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_strawberry@1x.png" srcset="img/ice_cream_strawberry@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">355&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">355<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               </h3>
@@ -294,7 +317,7 @@
                 <source type="image/webp" srcset="img/ice_cream_brulee@1x.webp 1x, img/ice_cream_brulee@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_brulee@1x.png" srcset="img/ice_cream_brulee@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">415&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">415<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
               </h3>
@@ -307,7 +330,7 @@
                 <source type="image/webp" srcset="img/ice_cream_lingonberry@1x.webp 1x, img/ice_cream_lingonberry@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_lingonberry@1x.png" srcset="img/ice_cream_lingonberry@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">325&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">325<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с брусничным джемом</a>
               </h3>
@@ -320,7 +343,7 @@
                 <source type="image/webp" srcset="img/ice_cream_blueberry@1x.webp 1x, img/ice_cream_blueberry@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_blueberry@1x.png" srcset="img/ice_cream_blueberry@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">410&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">410<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочно-черничное с цельными ягодами черники</a>
               </h3>
@@ -333,7 +356,7 @@
                 <source type="image/webp" srcset="img/ice_cream_lemon@1x.webp 1x, img/ice_cream_lemon@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_lemon@1x.png" srcset="img/ice_cream_lemon@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">375&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">375<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
               </h3>
@@ -346,7 +369,7 @@
                 <source type="image/webp" srcset="img/ice_cream_chocolate@1x.webp 1x, img/ice_cream_chocolate@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_chocolate@1x.png" srcset="img/ice_cream_chocolate@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">320&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">320<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с шоколадной стружкой</a>
               </h3>
@@ -359,7 +382,7 @@
                 <source type="image/webp" srcset="img/ice_cream_vanilla@1x.webp 1x, img/ice_cream_vanilla@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_vanilla@1x.png" srcset="img/ice_cream_vanilla@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">440&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">440<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочно-ванильное с кусочками шоколада</a>
               </h3>
@@ -372,7 +395,7 @@
                 <source type="image/webp" srcset="img/ice_cream_menthol@1x.webp 1x, img/ice_cream_menthol@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_menthol@1x.png" srcset="img/ice_cream_menthol@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">435&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">435<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с ментоловым сиропом</a>
               </h3>
@@ -385,7 +408,7 @@
                 <source type="image/webp" srcset="img/ice_cream_dark_chocolate@1x.webp 1x, img/ice_cream_dark_chocolate@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_dark_chocolate@1x.png" srcset="img/ice_cream_dark_chocolate@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">355&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">355<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с кусочками черного шоколада</a>
               </h3>
@@ -398,7 +421,7 @@
                 <source type="image/webp" srcset="img/ice_cream_mint@1x.webp 1x, img/ice_cream_mint@2x.webp 2x">
                 <img class="products__image" src="img/ice_cream_mint@1x.png" srcset="img/ice_cream_mint@2x.png 2x" alt="Фото мороженого">
               </picture>
-              <b class="products__price">420&nbsp;&#8381;<span class="products__weight">/кг</span></b>
+              <b class="products__price">420<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></b>
               <h3 class="products__name">
                 <a class="products__page-link" href="#">Сливочное с мятным сиропом</a>
               </h3>
@@ -408,13 +431,35 @@
             </li>
           </ul>
           <ul class="pagination">
-            <li class="pagination__item pagination__item--prev pagination__item--disabled"><a class="pagination__link"></a></li>
-            <li class="pagination__item pagination__item--current"><a class="pagination__link">1</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-            <li class="pagination__item pagination__item--next"><a class="pagination__link" href="#"></a></li>
+            <li class="pagination__item pagination__item--prev pagination__item--disabled">
+              <a class="pagination__link">
+                <svg class="pagination__icon pagination__icon--prev" width="8" height="12">
+                  <use xlink:href="#icon-right-small"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pagination__item pagination__item--current">
+              <a class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">4</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">5</a>
+            </li>
+            <li class="pagination__item pagination__item--next">
+              <a class="pagination__link" href="#">
+                <svg class="pagination__icon" width="8" height="12">
+                  <use xlink:href="#icon-right-small"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </section>
       </main>
@@ -422,23 +467,43 @@
         <section class="page-footer__social social">
           <ul class="social__list">
             <li class="social__button">
-              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+              <a class="social__link social__link--twitter" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+                <span class="visually-hidden">Твиттер</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
+              <a class="social__link social__link--instagram" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+              <a class="social__link social__link--facebook" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">ВКонтакте</span></a>
+              <a class="social__link social__link--vkontakte" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
             </li>
           </ul>
         </section>
         <section class="page-footer__about-us about-us">
           <ul class="about-us__menu">
-            <li class="about-us__info">
-              <a class="about-us__link bout-us__link--bold" href="#">Для поставщиков</a>
+            <li class="about-us__info about-us__info--heart">
+              <a class="about-us__link about-us__link--bold" href="#">Для поставщиков</a>
             </li>
             <li class="about-us__info">
               <a class="about-us__link" href="#">Наши документы</a>
@@ -452,11 +517,11 @@
           </ul>
         </section>
         <section class="page-footer__copyright copyright">
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
-            <span class="visually-hidden">HTML Academy</span>
+          <a class="copyright__logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39">
           </a>
           <p class="copyright__intro">
-            Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__link">HTML Academy</a> &copy;&nbsp;2017
+            Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy;&nbsp;2017
           </p>
         </section>
       </footer>

@@ -32,5 +32,23 @@
   width: 539px;
   padding-top: 22px;
   padding-left: 57px;
+  background-position: 0 9px;
+  background-repeat: no-repeat;
   box-sizing: border-box;
+
+  &--ice-cream {
+    background-image: url("../img/ice-cream.svg");
+  }
+
+  &--cow {
+    background-image: url("../img/cow.svg");
+  }
+
+  &--eco {
+    background-image: url("../img/eco.svg");
+  }
+
+  &--thermometer {
+    background-image: url("../img/thermometer.svg");
+  }
 }

@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <input class="page__background-toggle" type="radio" id="btn-1" name="toggle" checked>
     <input class="page__background-toggle" type="radio" id="btn-2" name="toggle">
     <input class="page__background-toggle" type="radio" id="btn-3" name="toggle">
@@ -49,7 +54,12 @@
           </nav>
           <ul class="user-list">
             <li class="user-list__item user-list__item--more">
-              <a class="user-list__link user-list__link--search" href="#"><span class="visually-hidden">Поиск</span></a>
+              <a class="user-list__link user-list__link--search" href="#">
+                <span class="visually-hidden">Поиск</span>
+                <svg class="user-list__search-icon" width="17" height="17">
+                  <use xlink:href="#icon-loupe"></use>
+                </svg>
+              </a>
               <div class="user-list__search search">
                 <form class="search__form" action="https://echo.htmlacademy.ru" method="get">
                   <p class="search__element">
@@ -61,7 +71,12 @@
               </div>
             </li>
             <li class="user-list__item user-list__item--more">
-              <a class="user-list__link user-list__link--authorization" href="#">Вход</a>
+              <a class="user-list__link user-list__link--authorization" href="#">
+                <svg class="user-list__authorization-icon" width="21" height="19">
+                  <use xlink:href="#icon-entrance"></use>
+                </svg>
+                Вход
+              </a>
               <div class="user-list__authorization authorization">
                 <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
                   <p class="authorization__element">
@@ -87,7 +102,9 @@
               </div>
             </li>
             <li class="user-list__item">
-              <a class="user-list__link user-list__link--basket"><span class="user-list__basket-count">Пусто</span></a>
+              <a class="user-list__link user-list__link--basket">
+                <span class="user-list__basket-count">Пусто</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -144,12 +161,12 @@
           <section class="page-main__products products">
             <h2 class="visually-hidden">Хиты</h2>
             <ul class="products__list">
-              <li class="products__item">
+              <li class="products__item products__item--hit">
                 <picture>
                   <source type="image/webp" srcset="img/ice_cream_orange@1x.webp 1x, img/ice_cream_orange@2x.webp 2x">
                   <img class="products__image" src="img/ice_cream_orange@1x.png" srcset="img/ice_cream_orange@2x.png 2x" alt="Фото мороженого">
                 </picture>
-                <div class="products__price">310&nbsp;&#8381;<span class="products__weight">/кг</span></div>
+                <div class="products__price">310<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></div>
                 <h3 class="products__name">
                   <a class="products__page-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                 </h3>
@@ -157,12 +174,12 @@
                   <a class="products__button button" href="#">Быстрый просмотр</a>
                 </div>
               </li>
-              <li class="products__item">
+              <li class="products__item products__item--hit">
                 <picture>
                   <source type="image/webp" srcset="img/ice_cream_coffee@1x.webp 1x, img/ice_cream_coffee@2x.webp 2x">
                   <img class="products__image" src="img/ice_cream_coffee@1x.png" srcset="img/ice_cream_coffee@2x.png 2x" alt="Фото мороженого">
                 </picture>
-                <div class="products__price">380&nbsp;&#8381;<span class="products__weight">/кг</span></div>
+                <div class="products__price">380<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></div>
                 <h3 class="products__name">
                   <a class="products__page-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                 </h3>
@@ -170,12 +187,12 @@
                   <a class="products__button button" href="#">Быстрый просмотр</a>
                 </div>
               </li>
-              <li class="products__item">
+              <li class="products__item products__item--hit">
                 <picture>
                   <source type="image/webp" srcset="img/ice_cream_strawberry@1x.webp 1x, img/ice_cream_strawberry@2x.webp 2x">
                   <img class="products__image" src="img/ice_cream_strawberry@1x.png" srcset="img/ice_cream_strawberry@2x.png 2x" alt="Фото мороженого">
                 </picture>
-                <div class="products__price">355&nbsp;&#8381;<span class="products__weight">/кг</span></div>
+                <div class="products__price">355<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></div>
                 <h3 class="products__name">
                   <a class="products__page-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
                 </h3>
@@ -183,12 +200,12 @@
                   <a class="products__button button" href="#">Быстрый просмотр</a>
                 </div>
               </li>
-              <li class="products__item">
+              <li class="products__item products__item--hit">
                 <picture>
-                  <source type="image/webp" srcset="img/ice_cream_brulee@1x.webp 1x, img/iice_cream_brulee@2x.webp 2x">
+                  <source type="image/webp" srcset="img/ice_cream_brulee@1x.webp 1x, img/ice_cream_brulee@2x.webp 2x">
                   <img class="products__image" src="img/ice_cream_brulee@1x.png" srcset="img/ice_cream_brulee@2x.png 2x" alt="Фото мороженого">
                 </picture>
-                <div class="products__price">415&nbsp;&#8381;<span class="products__weight">/кг</span></div>
+                <div class="products__price">415<img class="products__currency" src="img/ruble.svg" width="31" height="36" alt="рублей"><span class="products__weight">/кг</span></div>
                 <h3 class="products__name">
                   <a class="products__page-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
                 </h3>
@@ -203,19 +220,19 @@
             <b class="features__slogan">Магазин Глейси &mdash; это онлайн и офлайн магазин по продаже мороженого
             собственного производства на развес</b>
             <ul class="features__list">
-              <li class="features__item">
+              <li class="features__item features__item--ice-cream">
                 Все наше мороженое изготавливается на собственном производстве, с использованием
                 современного оборудования и проверенных временем технологий.
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--cow">
                 Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний,
                 с которыми нас связывает долговременное сотрудничество.
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--eco">
                 Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества.
                 Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
               </li>
-              <li class="features__item">
+              <li class="features__item features__item--thermometer">
                 Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке,
                 который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
               </li>
@@ -231,24 +248,27 @@
               </h2>
             </article>
             <section class="subscription">
-              <h2 class="visually-hidden">Подписка на рассылку</h2>
-              <p class="subscription__description">
-                Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
-                вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
-                ерунды. Честно =)
-              </p>
-              <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-                <p class="subscription__element">
-                  <input class="subscription__field field" id="subscription-email" type="email" name="e-mail" placeholder="Электронная почта" required>
-                  <label class="subscription__label" for="subscription-email">Электронная почта</label>
+              <div class="subscription__wrapper">
+                <h2 class="visually-hidden">Подписка на рассылку</h2>
+                <p class="subscription__description">
+                  Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
+                  вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
+                  ерунды. Честно =)
                 </p>
-                <button class="subscription__button button" type="submit">Отправить</button>
-              </form>
+                <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="subscription__element">
+                    <input class="subscription__field field" id="subscription-email" type="email" name="e-mail" placeholder="Электронная почта" required>
+                    <label class="subscription__label" for="subscription-email">Электронная почта</label>
+                  </p>
+                  <button class="subscription__button button" type="submit">Отправить</button>
+                </form>
+              </div>
             </section>
           </div>
         </div>
         <section class="map">
           <h2 class="visually-hidden">Карта</h2>
+          <iframe class="map__service" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523302204594" allowfullscreen></iframe>
           <div class="map__contacts contacts">
             <h3 class="visually-hidden">Обратная связь</h3>
             <address class="contacts__description contacts__description--address">
@@ -269,22 +289,42 @@
         <section class="page-footer__social social">
           <ul class="social__list">
             <li class="social__button">
-              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a>
+              <a class="social__link social__link--twitter" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+                <span class="visually-hidden">Твиттер</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a>
+              <a class="social__link social__link--instagram" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a>
+              <a class="social__link social__link--facebook" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
             </li>
             <li class="social__button">
-              <a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">ВКонтакте</span></a>
+              <a class="social__link social__link--vkontakte" href="#">
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
             </li>
           </ul>
         </section>
         <section class="page-footer__about-us about-us">
           <ul class="about-us__menu">
-            <li class="about-us__info">
+            <li class="about-us__info about-us__info--heart">
               <a class="about-us__link about-us__link--bold" href="#">Для поставщиков</a>
             </li>
             <li class="about-us__info">
@@ -300,7 +340,7 @@
         </section>
         <section class="page-footer__copyright copyright">
           <a class="copyright__logo-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <span class="visually-hidden">HTML Academy</span>
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" alt="Логотип HTML Academy" width="108" height="39">
           </a>
           <p class="copyright__intro">
             Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy;&nbsp;2017

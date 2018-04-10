@@ -12,6 +12,14 @@
   width: 267px;
   margin-bottom: 38px;
 
+  &--hit:before {
+    content: "";
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    background-image: url("../img/hit.svg");
+  }
+
   &:hover .products__wrapper {
     display: block;
   }
@@ -61,6 +69,12 @@
 
 .products__weight {
   font-size: 30px;
+}
+
+.products__currency {
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-left: 3px;
 }
 
 .products__wrapper {

@@ -74,7 +74,10 @@
   width: 11px;
   height: 11px;
   padding: 0;
+  background-color: transparent;
+  background-image: url("../img/cross-small.svg");
   border: none;
+  cursor: pointer;
 }
 
 .basket__product-image {

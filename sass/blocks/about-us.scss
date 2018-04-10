@@ -1,11 +1,12 @@
 .about-us {
-  display: flex;
   width: 560px;
+  margin-top: 12px;
 }
 
 .about-us__menu {
   display: flex;
   flex-wrap: wrap; /* */
+  align-items: flex-start;
   width: 303px;
   margin: 0 auto;
   padding: 0;
@@ -19,6 +20,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   &--bold {
+    position: relative;
     font-weight: bold;
   }
 
@@ -31,5 +33,16 @@
 }
 
 .about-us__info {
+  position: relative;
   min-width: 140px;
+
+  &--heart::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -21px;
+    width: 15px;
+    height: 13px;
+    background-image: url("../img/heart.svg");
+  }
 }

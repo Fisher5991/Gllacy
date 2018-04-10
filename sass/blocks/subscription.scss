@@ -1,18 +1,21 @@
 .subscription {
-  display: flex;
-  flex-direction: column;
   width: 560px;
   height: 220px;
-  padding: 34px 26px 40px;
-  background-color: #f8f7f4;
-  background-image: url("../img/mail@1x.png");
+  background-image: url("../img/bg-post.svg");
   background-repeat: no-repeat;
   border-radius: 15px;
   box-sizing: border-box;
+}
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/mail@2x.png");
-  }
+.subscription__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 210px;
+  margin: 5px 5px 5px 6px;
+  padding: 29px 21px 35px 20px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .subscription__description {

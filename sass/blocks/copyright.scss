@@ -1,8 +1,11 @@
 .copyright {
   width: 267px;
+  padding-left: 78px;
+  box-sizing: border-box;
 }
 
 .copyright__intro {
+  margin: 0;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
@@ -18,4 +21,9 @@
     color: #ffbc9e;
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
   }
+}
+
+.copyright__image {
+  display: block;
+  margin-bottom: 5px;
 }
