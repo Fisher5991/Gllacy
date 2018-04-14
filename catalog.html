@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page page--inner">
@@ -198,29 +199,31 @@
                 <div class="filters__service"></div>
               </div>
             </fieldset>
-            <fieldset class="filters__block filters__block--price">
-              <legend class="filters__name filters__name--price">Цена:</legend>
-              <div class="filters__field-wrapper">
-                <label class="filters__label filters__label--price" for="min-price">
-                  <input class="filters__field" id="min-price" type="text" name="min-price" placeholder="100"> руб.
-                  &ndash;
-                </label>
-                <label class="filters__label filters__label--price" for="max-price">
-                  <input class="filters__field" id="max-price" type="text" name="max-price" placeholder="500"> руб.
-                </label>
-              </div>
-              <div class="filters__range range">
-                <div class="range__wrapper">
-                  <div class="range__controls">
-                    <div class="range__scale">
-                      <div class="range__bar"></div>
+            <div class="filters__block-wrapper">
+              <fieldset class="filters__block">
+                <legend class="filters__name filters__name--price">Цена:</legend>
+                <div class="filters__field-wrapper">
+                  <label class="filters__label filters__label--price" for="min-price">
+                    <input class="filters__field" id="min-price" type="text" name="min-price" placeholder="100"> руб.
+                    &ndash;
+                  </label>
+                  <label class="filters__label filters__label--price" for="max-price">
+                    <input class="filters__field" id="max-price" type="text" name="max-price" placeholder="500"> руб.
+                  </label>
+                </div>
+                <div class="filters__range range">
+                  <div class="range__wrapper">
+                    <div class="range__controls">
+                      <div class="range__scale">
+                        <div class="range__bar"></div>
+                      </div>
+                      <div class="range__toggle range__toggle--min" tabindex="0"></div>
+                      <div class="range__toggle range__toggle--max" tabindex="0"></div>
                     </div>
-                    <div class="range__toggle range__toggle--min" tabindex="0"></div>
-                    <div class="range__toggle range__toggle--max" tabindex="0"></div>
                   </div>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
             <fieldset class="filters__block">
               <legend class="filters__name">Жирность:</legend>
               <ul class="filters__options filters__options--radio">
@@ -526,5 +529,7 @@
         </section>
       </footer>
     </div>
+
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>

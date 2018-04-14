@@ -13,6 +13,12 @@
   font-weight: 500;
 }
 
+.filters__block-wrapper {
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 16px;
+}
+
 .filters__block {
   margin: 0;
   margin-right: 15px;
@@ -159,6 +165,7 @@
     height: 22px;
     background-image: url("../img/radio-off.svg");
     background-size: 22px 22px;
+    background-repeat: no-repeat;
     opacity: 0.8;
   }
 
@@ -199,12 +206,12 @@
   &--radio::before {
     background-image: url("../img/radio-on.svg");
     background-size: 22px 22px;
+    opacity: 1;
   }
 }
 
 .filters__checkbox:checked + .filters__label {
   &--checkbox::before {
-    width: 23px;
     background-image: url("../img/checkbox-on.svg");
     background-size: 23px 20px;
   }
@@ -221,6 +228,7 @@
     opacity: 0.4;
   }
 }
+
 .filters__field {
   width: 25px;
   height: 14px;
@@ -235,6 +243,7 @@
   &::placeholder {
     font: inherit;
     color: inherit;
+    opacity: 1;
   }
 }
 
