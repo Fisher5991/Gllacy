@@ -1,11 +1,14 @@
 .feedback {
   display: none;
-}
-
-.feedback__wrapper {
+  margin-top: -221px;
+  margin-left: -239px;
   width: 477px;
+  max-width: 100%;
+  max-height: 100%;
   padding: 14px 25px 14px 24px;
   background-color: #f8f7f4;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .feedback__notice {
@@ -40,8 +43,9 @@
     opacity: 1;
   }
 
-  &:valid + .feedback__label {
+  &:not(:focus):valid + .feedback__label {
     color: #999999;
+    opacity: 1;
   }
 
   &--textarea {
@@ -49,6 +53,7 @@
     height: 155px;
     padding-top: 6px;
     padding-bottom: 6px;
+    resize: none;
   }
 }
 

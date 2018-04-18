@@ -46,15 +46,13 @@ gulp.task("style", function() {
 });
 
 gulp.task("script", function() {
-  gulp.src("js/scripts.js")
+  return gulp.src("js/**/*.js")
     .pipe(minifyjs())
-    .pipe(rename("scripts.min.js"))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest("build/js"))
-
-  gulp.src("js/picturefill.js")
-    .pipe(minifyjs())
-    .pipe(rename("picturefill.min.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
 });
 
 gulp.task("sprite", function() {
@@ -102,6 +100,7 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.scss", ["style"]);
   gulp.watch("*.html", ["html"]);
+  gulp.watch("js/**/*.js", ["script"]);
 });
 
 gulp.task("build", function(done) {

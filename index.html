@@ -349,8 +349,8 @@
         </section>
       </footer>
 
-      <section class="modal feedback">
-        <div class="feedback__wrapper">
+      <section class="modal">
+        <div class="modal__window feedback">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <b class="feedback__notice">Мы обязательно вам ответим!</b>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
@@ -369,10 +369,12 @@
             <button class="feedback__button button" type="submit">Отправить</button>
           </form>
           <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
-        </section>
-      </div>
+        </div>
+        <div class="modal__overlay modal__overlay--close"></div>
+      </section>
     </div>
 
     <script src="js/picturefill.min.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

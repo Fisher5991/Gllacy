@@ -46,8 +46,9 @@
     opacity: 1;
   }
 
-  &:valid + .subscription__label {
+  &:not(:focus):valid + .subscription__label {
     color: #999999;
+    opacity: 1;
   }
 }
 
