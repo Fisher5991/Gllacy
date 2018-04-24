@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
@@ -119,16 +119,16 @@
           <h1 class="visually-hidden">Магазин мороженого</h1>
           <div class="main-products slider">
             <ul class="main-products__list slider__list">
-              <li class="main-products__item slider__item slider__item--1">
+              <li class="main-products__item slider__item slider__item--first">
                 <h2 class="main-products__title">Крем-брюле и пломбир с малиновым джемом</h2>
                 <a class="main-products__link button" href="#">Давайте оба!</a>
               </li>
-              <li class="main-products__item slider__item slider__item--2">
+              <li class="main-products__item slider__item slider__item--second">
                 <h2 class="main-products__title">Шоколадный пломбир и лимонный сорбет</h2>
                 <a class="main-products__link button" href="#">Давайте оба!</a>
               </li>
-              <li class="main-products__item slider__item slider__item--3">
-                <h2 class="main-products__title">Пломбир с помадкой и клубничный щербет</h2>
+              <li class="main-products__item slider__item slider__item--third">
+                <h2 class="main-products__title main-products__title--third">Пломбир с помадкой и клубничный щербет</h2>
                 <a class="main-products__link button" href="#">Давайте оба!</a>
               </li>
             </ul>
@@ -140,23 +140,25 @@
           </div>
           <section class="page-main__promo promo">
             <h2 class="visually-hidden">Акции</h2>
-            <div class="promo__block promo__block--raspberry">
-              <h3 class="promo__title">Малинка даром!</h3>
-              <p class="promo__info">
-                При покупке 2&nbsp;кг любого фруктового мороженого,
-                добавим в ваш заказ банку
-                малинового варенья бесплатно.
-              </p>
-              <a class="button promo__link" href="#">Хочу варенье!</a>
-            </div>
-            <div class="promo__block promo__block--chocolate">
-              <h3 class="promo__title">Шоколадки даром!</h3>
-              <p class="promo__info">
-                При покупке 2&nbsp;кг пломбира, добавим в ваш
-                заказ упаковку вкуснейшей шоколадной
-                присыпки совершенно бесплатно.
-              </p>
-              <a class="button promo__link" href="#">Хочу шоколадки!</a>
+            <div class="promo__wrapper">
+              <div class="promo__block promo__block--raspberry">
+                <h3 class="promo__title">Малинка даром!</h3>
+                <p class="promo__info">
+                  При покупке 2&nbsp;кг любого фруктового мороженого,
+                  добавим в ваш заказ банку
+                  малинового варенья бесплатно.
+                </p>
+                <a class="button promo__link" href="#">Хочу варенье!</a>
+              </div>
+              <div class="promo__block promo__block--chocolate">
+                <h3 class="promo__title">Шоколадки даром!</h3>
+                <p class="promo__info">
+                  При покупке 2&nbsp;кг пломбира, добавим в ваш
+                  заказ упаковку вкуснейшей шоколадной
+                  присыпки совершенно бесплатно.
+                </p>
+                <a class="button promo__link" href="#">Хочу шоколадки!</a>
+              </div>
             </div>
           </section>
           <section class="page-main__products products">
@@ -218,7 +220,7 @@
           </section>
           <section class="page-main__features features">
             <h2 class="visually-hidden">Преимущества</h2>
-            <b class="features__slogan">Магазин Глейси &mdash; это онлайн и офлайн магазин по продаже мороженого
+            <b class="features__slogan">Магазин Глейси &ndash; это онлайн и офлайн магазин по продаже мороженого
             собственного производства на развес</b>
             <ul class="features__list">
               <li class="features__item features__item--ice-cream">

@@ -1,13 +1,13 @@
 .about-us {
   width: 560px;
-  margin-top: 12px;
+  margin-top: 10.5px;
 }
 
 .about-us__menu {
   display: flex;
   flex-wrap: wrap; /* */
   align-items: flex-start;
-  width: 303px;
+  width: 307px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -34,7 +34,8 @@
 
 .about-us__info {
   position: relative;
-  min-width: 140px;
+  min-width: 112px;
+  margin-right: 32px;
 
   &--heart::before {
     content: "";
@@ -44,5 +45,9 @@
     width: 15px;
     height: 13px;
     background-image: url("../img/heart.svg");
+  }
+
+  &:nth-child(even) {
+    margin-right: 0;
   }
 }

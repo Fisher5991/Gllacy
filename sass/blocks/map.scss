@@ -3,11 +3,12 @@
   width: 1200px;
   height: 429px; /* min */
   margin: 0 auto;
+  background-color: #cee0c0;
   background-image: url("../img/pin.svg"),
                     url("../img/pin-shadow@1x.png"),
                     url("../img/map@1x.jpg");
   background-size: auto, 182px auto, 1200px auto;
-  background-position: 266px 138px, 309px 167px, 0 -1px;
+  background-position: 266px 138px, 306px 167px, 0 -1px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

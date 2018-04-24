@@ -1,8 +1,10 @@
 .promo {
+  margin-bottom: 40px;
+}
+
+.promo__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  margin-bottom: 40px;
 }
 
 .promo__block {
@@ -44,6 +46,7 @@
 
 .promo__info {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
 }

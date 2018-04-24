@@ -7,9 +7,9 @@
   display: none;
 }
 
-#btn-1:checked ~ .page__background .slider__item--1,
-#btn-2:checked ~ .page__background .slider__item--2,
-#btn-3:checked ~ .page__background .slider__item--3 {
+#btn-1:checked ~ .page__background .slider__item--first,
+#btn-2:checked ~ .page__background .slider__item--second,
+#btn-3:checked ~ .page__background .slider__item--third {
   display: block;
 }
 

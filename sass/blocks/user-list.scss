@@ -65,6 +65,12 @@
     fill: #000000;
   }
 
+  &:focus + .user-list__authorization,
+  &:focus + .user-list__search,
+  &:focus + .user-list__basket {
+    display: block;
+  }
+
   &--search {
     padding: 16px 17px 16px 16px;
   }

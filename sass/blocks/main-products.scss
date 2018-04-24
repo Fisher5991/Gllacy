@@ -9,12 +9,16 @@
 }
 
 .main-products__title {
-  width: 667px;
+  width: 700px;
   margin: 0 auto;
   margin-bottom: 33px;
   font-size: 60px;
   line-height: 60px;
   font-weight: bold;
+
+  &--third {
+    width: 650px;
+  }
 }
 
 .main-products__item {
